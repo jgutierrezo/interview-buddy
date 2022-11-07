@@ -97,6 +97,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-gG-yla">
+                                <rect key="frame" x="115" y="146" width="161" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,7 +124,7 @@
         <!--View Controller-->
         <scene sceneID="OOV-JM-qRu">
             <objects>
-                <viewController id="B63-q8-abo" customClass="ViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B63-q8-abo" customClass="ViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mgH-g3-t0b">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +148,7 @@
         <!--Categories Collection View Controller-->
         <scene sceneID="Nrq-L2-PIE">
             <objects>
-                <collectionViewController id="GWE-pp-ma6" customClass="CategoriesCollectionViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="GWE-pp-ma6" customClass="CategoriesCollectionViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0KA-eH-EJs">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +160,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="CategoriesCollectionViewCell" id="QYL-ry-dwc" customClass="CategoriesCollectionViewCell" customModule="Project" customModuleProvider="target">
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="CategoriesCollectionViewCell" id="QYL-ry-dwc" customClass="CategoriesCollectionViewCell" customModule="interview_buddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="189" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OwQ-Vo-TdW">
@@ -207,13 +214,13 @@
         <!--Table View Controller-->
         <scene sceneID="2pb-EC-rLa">
             <objects>
-                <tableViewController id="vwC-EA-aFx" customClass="TableViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vwC-EA-aFx" customClass="TableViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fhI-UP-bKL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="117" id="Tc5-lw-fym" customClass="TableViewCell" customModule="Project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="117" id="Tc5-lw-fym" customClass="TableViewCell" customModule="interview_buddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tc5-lw-fym" id="Svc-X3-A72">

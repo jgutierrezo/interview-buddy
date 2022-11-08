@@ -1,0 +1,146 @@
+Juan Quizz 1: 
+
+JS Quizz - JavaScript Array Iteration
+
+(b)
+1. What does the jsQ function returns?
+function jsQ() {
+  let arr = ['a', 'b', 'c'];
+  var arr2 = arr.forEach(c => {
+    return c + c;
+  });
+  return arr2;
+}
+
+a. ["a", "b", "c"]
+b. undefined
+c. ["aa", "bb", "cc"]
+d. Throws an error
+
+(a)
+2. What does the jsQ function returns?
+
+function jsQ() {
+  let arr = ['a', 'b', 'c'];
+  arr.map(c => {
+    return c + c;
+  });
+  return arr;
+}
+
+a. ["a", "b", "c"]
+b. undefined
+c. ["aa", "bb", "cc"]
+d. Throws an error
+
+(d)
+3. What does the jsQ function returns?
+
+function jsQ() {
+  let arr = [1, 2, 3, 4, 5];
+  arr.filter(n => n > 3);
+  return arr;
+}
+
+a. [4, 5]
+b. ["3", "4", "5"]
+c. ["1", "2", "3", "4", "5"]
+d. [1, 2, 3, 4, 5]
+
+(b)
+4. What does the jsQ function returns?
+function jsQ() {
+  let arr = [1, 2, 3, 4, 5];
+  return arr.filter(n => n > 2).reduce((total, value) => total*value);
+}
+
+a. Throws an error
+b. 60
+c. [3, 4, 5]
+d. 20
+
+(c)
+5. What does the jsQ function returns?
+function jsQ() {
+  let arr = [1, 2, 3, 4, 5];
+  return arr.some(n => n > 4);
+}
+
+a. 5
+b. false
+c. true
+d. [5]
+
+(b)
+6. What does the jsQ function returns?
+function jsQ() {
+  let arr = [1, 2, 3, 4, 5];
+  return arr.find(n => n%2 == 0);
+}
+
+a. [2, 4]
+b. 2
+c. true
+d. []
+
+(a)
+7. What does the jsQ function returns?
+
+function jsQ() {
+  return Array.from("12345").indexOf("3");
+}
+
+a. 2
+b. 3
+c. Throws an error
+d. -1
+
+8. What does the jsQ function returns?
+
+function jsQ() {
+  return Array.from("12333").lastIndexOf(c => c == "3");
+}
+
+a. -1
+b. Throws an error
+c. 4
+d. "4"
+
+(d)
+9. What does the jsQ function returns?
+
+function jsQ() {
+  const arr = [40, 100, 1];
+  arr.sort();
+  return arr;
+}
+
+a. [40, 100, 1]
+b. [100, 40, 1]
+c. [1, 40, 100]
+d. [1, 100, 40]
+
+(c)
+10. What does the jsQ function returns?
+
+function jsQ() {
+  const arr = [40, 100, 1];
+  arr.sort((a, b) => a - b);
+  return arr;
+}
+
+a. [40, 100, 1]
+b. [100, 40, 1]
+c. [1, 40, 100]
+d. [1, 100, 40]
+
+
+
+
+
+
+
+
+
+
+

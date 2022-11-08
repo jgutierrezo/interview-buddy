@@ -3,7 +3,7 @@ Juan Quizz 1:
 JS Quizz - JavaScript Array Iteration
 
 (b)
-1. What does the jsQ function returns?
+1. What does the jsQ function return?
 function jsQ() {
   let arr = ['a', 'b', 'c'];
   var arr2 = arr.forEach(c => {
@@ -18,7 +18,7 @@ c. ["aa", "bb", "cc"]
 d. Throws an error
 
 (a)
-2. What does the jsQ function returns?
+2. What does the jsQ function return?
 
 function jsQ() {
   let arr = ['a', 'b', 'c'];
@@ -34,7 +34,7 @@ c. ["aa", "bb", "cc"]
 d. Throws an error
 
 (d)
-3. What does the jsQ function returns?
+3. What does the jsQ function return?
 
 function jsQ() {
   let arr = [1, 2, 3, 4, 5];
@@ -48,7 +48,7 @@ c. ["1", "2", "3", "4", "5"]
 d. [1, 2, 3, 4, 5]
 
 (b)
-4. What does the jsQ function returns?
+4. What does the jsQ function return?
 function jsQ() {
   let arr = [1, 2, 3, 4, 5];
   return arr.filter(n => n > 2).reduce((total, value) => total*value);
@@ -60,7 +60,7 @@ c. [3, 4, 5]
 d. 20
 
 (c)
-5. What does the jsQ function returns?
+5. What does the jsQ function return?
 function jsQ() {
   let arr = [1, 2, 3, 4, 5];
   return arr.some(n => n > 4);
@@ -72,7 +72,7 @@ c. true
 d. [5]
 
 (b)
-6. What does the jsQ function returns?
+6. What does the jsQ function return?
 function jsQ() {
   let arr = [1, 2, 3, 4, 5];
   return arr.find(n => n%2 == 0);
@@ -84,7 +84,7 @@ c. true
 d. []
 
 (a)
-7. What does the jsQ function returns?
+7. What does the jsQ function return?
 
 function jsQ() {
   return Array.from("12345").indexOf("3");
@@ -95,7 +95,7 @@ b. 3
 c. Throws an error
 d. -1
 
-8. What does the jsQ function returns?
+8. What does the jsQ function return?
 
 function jsQ() {
   return Array.from("12333").lastIndexOf(c => c == "3");
@@ -107,7 +107,7 @@ c. 4
 d. "4"
 
 (d)
-9. What does the jsQ function returns?
+9. What does the jsQ function return?
 
 function jsQ() {
   const arr = [40, 100, 1];
@@ -121,7 +121,7 @@ c. [1, 40, 100]
 d. [1, 100, 40]
 
 (c)
-10. What does the jsQ function returns?
+10. What does the jsQ function return?
 
 function jsQ() {
   const arr = [40, 100, 1];
@@ -136,11 +136,111 @@ d. [1, 100, 40]
 
 
 
+Juan Quizz 2: 
+
+JS Quizz - JavaScript Core Concepts
+
+(a)
+1. Which is the function of the call stack?
+
+a. Interpreter's mechanism to keep track its place on a script that calls multiple functions
+b. Is the same as a call back
+c. Establish a socket connection
+d. Compiles the code to be underestandable for the machine
 
 
+2. Which is not a primitive type?
+
+a. string
+b. undefined
+c. null
+d. Array
+
+(c)
+3. What does the jsQ function return?
+
+function jsQ() {
+  let a = 2;
+  let b = 3;
+  let c = a;
+
+  c = a*2;
+
+  return a;
+}
+
+a. undefined
+b. 3
+c. 2
+d. 4
 
 
+(a)
+4. What does the jsQ function return?
+
+function jsQ() {
+  let a = 2;
+  let b = '2';
+  if (a === b) {
+    return true;
+  }
+  return false;
+}
+
+a. false
+b. true
+c. Throws an error
+d. undefined
+
+(d)
+5. Select the one that is not a JavaScript scope:
+
+a. block scope
+b. function scope
+c. global scope
+d. callback scope
 
 
+6. In the DOM, all the properties, methods and events are organized into:
+
+a. Classes
+b. Objects
+c. Modules
+d. Tables
+
+(c)
+7. Structure of the DOM:
+
+a. Dynamic structure
+b. Granular structure
+c. Tree-like structure
+d. Hash table structure
+
+(a)
+8. Object to access information of the browser that is executing the script
+
+a. navigator
+b. window
+c. document
+d. location
+
+(b)
+9. Constant datatype
+
+a. constant
+b. const
+c. var
+d. let
+
+(a.)
+10. The output of the following code: 
+
+var a = true + true + true * 3;
+print(a)
+
+a. 5
+b. 3
+c. Throws an error
+d. 0
 
 

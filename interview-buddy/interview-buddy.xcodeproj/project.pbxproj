@@ -16,6 +16,8 @@
 		0D1729A228FEF2C70059CBBE /* interview_buddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729A128FEF2C70059CBBE /* interview_buddyTests.swift */; };
 		0D1729AC28FEF2C70059CBBE /* interview_buddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */; };
 		0D1729AE28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */; };
+		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
+		8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0D1729A728FEF2C70059CBBE /* interview-buddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-buddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITests.swift; sourceTree = "<group>"; };
 		0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionAnswerCard.swift; path = utils/QuestionAnswerCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				0D17299328FEF2C70059CBBE /* Assets.xcassets */,
 				0D17299528FEF2C70059CBBE /* LaunchScreen.storyboard */,
 				0D17299828FEF2C70059CBBE /* Info.plist */,
+				8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */,
+				8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
+				8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */,
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
+				8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */,
 				0D17298D28FEF2C60059CBBE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

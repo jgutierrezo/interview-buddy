@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A4e-Dp-JdU">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -299,12 +299,149 @@
             </objects>
             <point key="canvasLocation" x="140" y="701"/>
         </scene>
+        <!--Question View Controller-->
+        <scene sceneID="V6c-kw-eDi">
+            <objects>
+                <viewController id="A4e-Dp-JdU" customClass="QuestionViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HfF-7b-bi2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oog-mo-Kp6" customClass="QuestionAnswerCard" customModule="interview_buddy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="74" width="358" height="277"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-r4-NBn">
+                                        <rect key="frame" x="8" y="8" width="342" height="261"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FZI-r4-NBn" firstAttribute="leading" secondItem="Oog-mo-Kp6" secondAttribute="leadingMargin" id="72n-Ih-M7S"/>
+                                    <constraint firstItem="FZI-r4-NBn" firstAttribute="bottom" secondItem="Oog-mo-Kp6" secondAttribute="bottomMargin" id="G1F-bo-85W"/>
+                                    <constraint firstItem="FZI-r4-NBn" firstAttribute="trailing" secondItem="Oog-mo-Kp6" secondAttribute="trailingMargin" id="UOe-1a-q3F"/>
+                                    <constraint firstItem="FZI-r4-NBn" firstAttribute="top" secondItem="Oog-mo-Kp6" secondAttribute="topMargin" id="iZM-ub-MJi"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rYf-Qm-uD2">
+                                <rect key="frame" x="19" y="421" width="352" height="326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAk-4s-6y2" customClass="QuestionAnswerCard" customModule="interview_buddy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEn-fn-ULR">
+                                                <rect key="frame" x="8" y="8" width="336" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Answer 1">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="uEX-R5-URW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7T-bI-zG8" customClass="QuestionAnswerCard" customModule="interview_buddy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="352" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l88-Bp-vL6">
+                                                <rect key="frame" x="0.0" y="8" width="352" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Answer 2">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="feo-eL-LSo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uic-va-wlc" customClass="QuestionAnswerCard" customModule="interview_buddy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="168" width="352" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgK-43-2QV">
+                                                <rect key="frame" x="0.0" y="8" width="352" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Answer 3">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="CYE-DC-dYw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vra-yL-r9s" customClass="QuestionAnswerCard" customModule="interview_buddy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="252" width="352" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpO-hs-VTO">
+                                                <rect key="frame" x="0.0" y="8" width="352" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Answer 4">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="5Q5-E8-VX9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vra-yL-r9s" firstAttribute="top" secondItem="rYf-Qm-uD2" secondAttribute="top" constant="252" id="cNT-Oy-7eQ"/>
+                                    <constraint firstItem="uic-va-wlc" firstAttribute="top" secondItem="rYf-Qm-uD2" secondAttribute="top" constant="168" id="q6N-Ua-bTl"/>
+                                    <constraint firstItem="p7T-bI-zG8" firstAttribute="top" secondItem="rYf-Qm-uD2" secondAttribute="top" constant="84" id="qyL-F9-RW3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eBf-Lc-ijh"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oog-mo-Kp6" firstAttribute="centerX" secondItem="rYf-Qm-uD2" secondAttribute="centerX" id="35S-Ch-UvE"/>
+                            <constraint firstItem="Oog-mo-Kp6" firstAttribute="leading" secondItem="HfF-7b-bi2" secondAttribute="leadingMargin" id="AUn-uO-sp2"/>
+                            <constraint firstItem="rYf-Qm-uD2" firstAttribute="leading" secondItem="eBf-Lc-ijh" secondAttribute="leading" constant="19" id="IRr-aN-Pty"/>
+                            <constraint firstItem="rYf-Qm-uD2" firstAttribute="top" secondItem="Oog-mo-Kp6" secondAttribute="bottom" constant="70" id="PVA-uJ-s2x"/>
+                            <constraint firstItem="rYf-Qm-uD2" firstAttribute="top" secondItem="HfF-7b-bi2" secondAttribute="top" constant="421" id="TG4-21-mmC"/>
+                            <constraint firstItem="Oog-mo-Kp6" firstAttribute="top" secondItem="eBf-Lc-ijh" secondAttribute="top" constant="27" id="n4b-lM-RVQ"/>
+                            <constraint firstItem="Oog-mo-Kp6" firstAttribute="trailing" secondItem="HfF-7b-bi2" secondAttribute="trailingMargin" id="p2J-G0-eTe"/>
+                            <constraint firstItem="eBf-Lc-ijh" firstAttribute="bottom" secondItem="rYf-Qm-uD2" secondAttribute="bottom" constant="63" id="ylO-Ku-QBQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answer1" destination="hEn-fn-ULR" id="AMH-OE-b6R"/>
+                        <outlet property="answer2" destination="l88-Bp-vL6" id="U1g-Dr-I9N"/>
+                        <outlet property="answer3" destination="DgK-43-2QV" id="Ne1-wA-Rd2"/>
+                        <outlet property="answer4" destination="ZpO-hs-VTO" id="YeQ-AI-b1g"/>
+                        <outlet property="questionLabel" destination="FZI-r4-NBn" id="okg-Ua-OCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-Ae-z1U" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-860" y="-778"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -317,6 +454,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -18,6 +18,8 @@
 		0D1729AE28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */; };
 		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
 		8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */; };
+		8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */; };
+		8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionAnswerCard.swift; path = utils/QuestionAnswerCard.swift; sourceTree = "<group>"; };
+		8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
+		8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				0D17299828FEF2C70059CBBE /* Info.plist */,
 				8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */,
 				8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */,
+				8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */,
+				8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */,
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
 				8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */,
+				8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */,
+				8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */,
 				0D17298D28FEF2C60059CBBE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

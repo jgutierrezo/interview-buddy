@@ -430,6 +430,68 @@
             </objects>
             <point key="canvasLocation" x="-860" y="-778"/>
         </scene>
+        <!--Badges Collection View Controller-->
+        <scene sceneID="CnG-F0-re9">
+            <objects>
+                <collectionViewController id="g3F-ET-liC" customClass="BadgesCollectionViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="25E-Oq-wAB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="ip7-Nq-UV1">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dwU-9K-fGb" customClass="BadgeCollectionViewCell" customModule="interview_buddy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bhy-aJ-hlG">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUy-LK-Qa9">
+                                            <rect key="frame" x="0.0" y="120" width="150" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="eVc-Eb-F0F"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-O2-v5q">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="121"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eaB-O2-v5q" firstAttribute="trailing" secondItem="uUy-LK-Qa9" secondAttribute="trailing" id="O42-bk-pDe"/>
+                                        <constraint firstAttribute="bottom" secondItem="eaB-O2-v5q" secondAttribute="bottom" constant="29" id="UkY-Dx-aLj"/>
+                                        <constraint firstItem="eaB-O2-v5q" firstAttribute="leading" secondItem="bhy-aJ-hlG" secondAttribute="leading" id="ZT3-zb-R6k"/>
+                                        <constraint firstItem="eaB-O2-v5q" firstAttribute="top" secondItem="bhy-aJ-hlG" secondAttribute="top" id="a6o-sJ-gXP"/>
+                                        <constraint firstItem="eaB-O2-v5q" firstAttribute="centerX" secondItem="bhy-aJ-hlG" secondAttribute="centerX" id="dS2-uX-lWI"/>
+                                        <constraint firstItem="eaB-O2-v5q" firstAttribute="leading" secondItem="uUy-LK-Qa9" secondAttribute="leading" id="v9W-PK-32h"/>
+                                        <constraint firstAttribute="bottom" secondItem="uUy-LK-Qa9" secondAttribute="bottom" id="vy0-lq-Kwb"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="150" height="150"/>
+                                <connections>
+                                    <outlet property="badgeImage" destination="eaB-O2-v5q" id="vYt-68-cVK"/>
+                                    <outlet property="titleLabel" destination="uUy-LK-Qa9" id="5mS-Cd-Vah"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="g3F-ET-liC" id="oxu-EE-rdE"/>
+                            <outlet property="delegate" destination="g3F-ET-liC" id="n78-2u-rAd"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xct-c6-0XB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.92307692307692" y="-750"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>

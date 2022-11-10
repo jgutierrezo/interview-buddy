@@ -22,11 +22,6 @@
 		8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */; };
 		8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */; };
 		8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */; };
-		8B56DCB7291D6F0C00275EB9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8B56DCB6291D6F0C00275EB9 /* FirebaseAuth */; };
-		8B56DCB9291D6F0C00275EB9 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8B56DCB8291D6F0C00275EB9 /* FirebaseAuthCombine-Community */; };
-		8B56DCBB291D6F0C00275EB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8B56DCBA291D6F0C00275EB9 /* FirebaseFirestore */; };
-		8B56DCBD291D6F0C00275EB9 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8B56DCBC291D6F0C00275EB9 /* FirebaseFirestoreCombine-Community */; };
-		8B56DCBF291D6F0C00275EB9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B56DCBE291D6F0C00275EB9 /* FirebaseFirestoreSwift */; };
 		97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */; };
 		F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +67,7 @@
 		8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
 		8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		974754C5314A7CD0A2DA125A /* Pods-interview-buddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.debug.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EDD23E990EDA140BD5FB72 /* Pods-interview-buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy/Pods-interview-buddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,11 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */,
-				8B56DCBB291D6F0C00275EB9 /* FirebaseFirestore in Frameworks */,
-				8B56DCB9291D6F0C00275EB9 /* FirebaseAuthCombine-Community in Frameworks */,
-				8B56DCBD291D6F0C00275EB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				8B56DCB7291D6F0C00275EB9 /* FirebaseAuth in Frameworks */,
-				8B56DCBF291D6F0C00275EB9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +105,7 @@
 		0D17297E28FEF2C60059CBBE = {
 			isa = PBXGroup;
 			children = (
+				8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */,
 				0D17298928FEF2C60059CBBE /* interview-buddy */,
 				0D1729A028FEF2C70059CBBE /* interview-buddyTests */,
 				0D1729AA28FEF2C70059CBBE /* interview-buddyUITests */,
@@ -211,11 +203,6 @@
 			);
 			name = "interview-buddy";
 			packageProductDependencies = (
-				8B56DCB6291D6F0C00275EB9 /* FirebaseAuth */,
-				8B56DCB8291D6F0C00275EB9 /* FirebaseAuthCombine-Community */,
-				8B56DCBA291D6F0C00275EB9 /* FirebaseFirestore */,
-				8B56DCBC291D6F0C00275EB9 /* FirebaseFirestoreCombine-Community */,
-				8B56DCBE291D6F0C00275EB9 /* FirebaseFirestoreSwift */,
 			);
 			productName = "interview-buddy";
 			productReference = 0D17298728FEF2C60059CBBE /* interview-buddy.app */;
@@ -293,7 +280,6 @@
 			);
 			mainGroup = 0D17297E28FEF2C60059CBBE;
 			packageReferences = (
-				8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0D17298828FEF2C60059CBBE /* Products */;
 			projectDirPath = "";
@@ -796,45 +782,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8B56DCB6291D6F0C00275EB9 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		8B56DCB8291D6F0C00275EB9 /* FirebaseAuthCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAuthCombine-Community";
-		};
-		8B56DCBA291D6F0C00275EB9 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		8B56DCBC291D6F0C00275EB9 /* FirebaseFirestoreCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreCombine-Community";
-		};
-		8B56DCBE291D6F0C00275EB9 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B56DCB5291D6F0C00275EB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0D17297F28FEF2C60059CBBE /* Project object */;
 }

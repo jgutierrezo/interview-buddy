@@ -16,10 +16,13 @@
 		0D1729A228FEF2C70059CBBE /* interview_buddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729A128FEF2C70059CBBE /* interview_buddyTests.swift */; };
 		0D1729AC28FEF2C70059CBBE /* interview_buddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */; };
 		0D1729AE28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */; };
+		1471907A4186E3822205CC33 /* Pods_interview_buddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */; };
 		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
 		8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */; };
 		8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */; };
 		8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */; };
+		97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */; };
+		F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddy_interview_buddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06418CE62173DD3E8B4E66DF /* Pods-interview-buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy.debug.xcconfig"; path = "Target Support Files/Pods-interview-buddy/Pods-interview-buddy.debug.xcconfig"; sourceTree = "<group>"; };
 		0D17298728FEF2C60059CBBE /* interview-buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D17298A28FEF2C60059CBBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D17298C28FEF2C60059CBBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +58,17 @@
 		0D1729A728FEF2C70059CBBE /* interview-buddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-buddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITests.swift; sourceTree = "<group>"; };
 		0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionAnswerCard.swift; path = utils/QuestionAnswerCard.swift; sourceTree = "<group>"; };
 		8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
 		8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		974754C5314A7CD0A2DA125A /* Pods-interview-buddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.debug.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5EDD23E990EDA140BD5FB72 /* Pods-interview-buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy/Pods-interview-buddy.release.xcconfig"; sourceTree = "<group>"; };
+		BB69B2D4E2EC030C21905913 /* Pods-interview-buddy-interview-buddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.debug.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1471907A4186E3822205CC33 /* Pods_interview_buddyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +106,8 @@
 				0D1729A028FEF2C70059CBBE /* interview-buddyTests */,
 				0D1729AA28FEF2C70059CBBE /* interview-buddyUITests */,
 				0D17298828FEF2C60059CBBE /* Products */,
+				36E018317216F39C84802AA3 /* Pods */,
+				88F6F4D36D853B8DA10B52D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +156,30 @@
 			path = "interview-buddyUITests";
 			sourceTree = "<group>";
 		};
+		36E018317216F39C84802AA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06418CE62173DD3E8B4E66DF /* Pods-interview-buddy.debug.xcconfig */,
+				B5EDD23E990EDA140BD5FB72 /* Pods-interview-buddy.release.xcconfig */,
+				BB69B2D4E2EC030C21905913 /* Pods-interview-buddy-interview-buddyUITests.debug.xcconfig */,
+				8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */,
+				974754C5314A7CD0A2DA125A /* Pods-interview-buddyTests.debug.xcconfig */,
+				83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88F6F4D36D853B8DA10B52D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */,
+				03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */,
+				5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1729B128FEF2C70059CBBE /* Build configuration list for PBXNativeTarget "interview-buddy" */;
 			buildPhases = (
+				20998642E7D63720BD0F75BC /* [CP] Check Pods Manifest.lock */,
 				0D17298328FEF2C60059CBBE /* Sources */,
 				0D17298428FEF2C60059CBBE /* Frameworks */,
 				0D17298528FEF2C60059CBBE /* Resources */,
+				D5D86070D1B9191AB1E0773C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1729B428FEF2C70059CBBE /* Build configuration list for PBXNativeTarget "interview-buddyTests" */;
 			buildPhases = (
+				FC8CA8F6BF6CB613A927920F /* [CP] Check Pods Manifest.lock */,
 				0D17299928FEF2C70059CBBE /* Sources */,
 				0D17299A28FEF2C70059CBBE /* Frameworks */,
 				0D17299B28FEF2C70059CBBE /* Resources */,
@@ -181,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1729B728FEF2C70059CBBE /* Build configuration list for PBXNativeTarget "interview-buddyUITests" */;
 			buildPhases = (
+				EAF9867F7A91BAEF59C8A03E /* [CP] Check Pods Manifest.lock */,
 				0D1729A328FEF2C70059CBBE /* Sources */,
 				0D1729A428FEF2C70059CBBE /* Frameworks */,
 				0D1729A528FEF2C70059CBBE /* Resources */,
+				3D1B3D4F9DDBF1DB99C40442 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +310,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20998642E7D63720BD0F75BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-interview-buddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D1B3D4F9DDBF1DB99C40442 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D86070D1B9191AB1E0773C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-interview-buddy/Pods-interview-buddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-interview-buddy/Pods-interview-buddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-interview-buddy/Pods-interview-buddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAF9867F7A91BAEF59C8A03E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-interview-buddy-interview-buddyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8CA8F6BF6CB613A927920F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-interview-buddyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D17298328FEF2C60059CBBE /* Sources */ = {
@@ -448,12 +597,13 @@
 		};
 		0D1729B228FEF2C70059CBBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06418CE62173DD3E8B4E66DF /* Pods-interview-buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T66A94QG9D;
+				DEVELOPMENT_TEAM = 94WA4VCJGX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "interview-buddy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,12 +626,13 @@
 		};
 		0D1729B328FEF2C70059CBBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5EDD23E990EDA140BD5FB72 /* Pods-interview-buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T66A94QG9D;
+				DEVELOPMENT_TEAM = 94WA4VCJGX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "interview-buddy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -504,6 +655,7 @@
 		};
 		0D1729B528FEF2C70059CBBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974754C5314A7CD0A2DA125A /* Pods-interview-buddyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +676,7 @@
 		};
 		0D1729B628FEF2C70059CBBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +697,7 @@
 		};
 		0D1729B828FEF2C70059CBBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB69B2D4E2EC030C21905913 /* Pods-interview-buddy-interview-buddyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,6 +716,7 @@
 		};
 		0D1729B928FEF2C70059CBBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

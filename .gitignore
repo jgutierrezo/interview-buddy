@@ -1,4 +1,5 @@
-.DS_Store
+interview-buddy/DS_Store
 **.xcuserstate
 project.xcworkspace/
 xcuserdata/
+interview-buddy/Pods/

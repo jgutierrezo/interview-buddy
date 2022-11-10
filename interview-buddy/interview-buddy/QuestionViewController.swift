@@ -4,10 +4,12 @@
 //
 //  Created by Rodrigo Chavez on 2022-11-08.
 //
-
 import UIKit
+import FirebaseFirestore
 
 class QuestionViewController: UIViewController {
+    
+    let db = Firestore.firestore()
 
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answer1: UIButton!
@@ -17,6 +19,15 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        db.collection("questions").getDocuments{ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+    }
         questionLabel.text = "Que lenguaje se usa para IOS"
         answer1.setTitle("Swift", for: .normal)
         answer2.setTitle("Python", for: .normal)

@@ -1,6 +1,6 @@
 # Run locally
-##### Apple M1 Pro
-##### Ventura 
+### Apple M1 Pro
+### Ventura 
 
 Open terminal and run  
 softwareupdate --install-rosetta  

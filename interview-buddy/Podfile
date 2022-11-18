@@ -8,7 +8,8 @@ target 'interview-buddy' do
   # Pods for interview-buddy
   pod ‘Firebase/Core'
   pod ‘Firebase/Firestore' 
-
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
   target 'interview-buddyTests' do
     inherit! :search_paths
     # Pods for testing

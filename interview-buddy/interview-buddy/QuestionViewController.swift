@@ -16,27 +16,82 @@ class QuestionViewController: UIViewController {
     @IBOutlet var answer2: UIButton!
     @IBOutlet var answer3: UIButton!
     @IBOutlet var answer4: UIButton!
+    
+    var language: String
+    var level: String
+    
+    var data: Dictionary<String, Any>
+    var questionNumber: Int
+    var correct: Int
+    var incorrect : Int
+    var topicsToReview: Set<String>
+    var questions: [Dictionary<String, Any>]
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.questionNumber = 0
+        self.correct = 0
+        self.incorrect = 0
+        self.topicsToReview = []
+        self.data = [:]
+        self.questions = []
+        self.language = "JS"
+        self.level = "Beginner"
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        db.collection("questions").getDocuments{ (querySnapshot, err) in
+        db.collection("questions").whereField("language", isEqualTo: self.language).whereField("level", isEqualTo: level).getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                var index = 0
+                if querySnapshot!.documents.count > 0 {
+                    index = Int.random(in: 0..<querySnapshot!.documents.count )
                 }
+                let document = querySnapshot!.documents[index]
+                self.data = document.data()
+                self.questions = self.data["questions"] as! [Dictionary<String, Any>]
+                self.setQuestion()
+                
             }
+        }
     }
-        questionLabel.text = "Que lenguaje se usa para IOS"
-        answer1.setTitle("Swift", for: .normal)
-        answer2.setTitle("Python", for: .normal)
-        answer3.setTitle("Java", for: .normal)
-        answer4.setTitle("C++", for: .normal)
+    
+    func setQuestion() {
+        questionLabel.text = questions[questionNumber]["question"] as? String
+        answer1.setTitle(questions[questionNumber]["answer1"] as? String, for: .normal)
+        answer2.setTitle(questions[questionNumber]["answer2"] as? String, for: .normal)
+        answer3.setTitle(questions[questionNumber]["answer3"] as? String, for: .normal)
+        answer4.setTitle(questions[questionNumber]["answer4"] as? String, for: .normal)
     }
     
     @IBAction func selectAnswer(_ sender: UIButton){
-        print(sender.titleLabel!.text)
+        if questions[questionNumber]["correct"] as? String == sender.titleLabel!.text {
+            correct += 1
+        } else {
+            incorrect +=  1
+            self.topicsToReview.insert(questions[questionNumber]["topic"] as! String)
+        }
+        questionNumber += 1
+        if questionNumber >= questions.count {
+            performSegue(withIdentifier: "QuizDone", sender: nil)
+        } else {
+            setQuestion()
+        }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "QuizDone" {
+            if let nextViewController = segue.destination as? QuizFeedback{
+                var results: Dictionary<String, Any> = [:]
+                results["correct"] = self.correct
+                results["incorrect"] = self.incorrect
+                results["topics"] = self.topicsToReview
+                results["language"] = self.language
+                results["level"] = self.level
+                nextViewController.data = results
+            }
+        }
+    }
 }

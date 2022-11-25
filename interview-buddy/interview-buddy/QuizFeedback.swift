@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class QuizFeedback: UIViewController {
 
@@ -24,9 +25,13 @@ class QuizFeedback: UIViewController {
     let db = Firestore.firestore()
     var user: String
     
+    //Obtain user
+    let userFirestore = Auth.auth().currentUser
+    
+    
     required init?(coder aDecoder: NSCoder) {
         self.data = [:]
-        self.user = "j8Gzxm0KkAUBZabZIPteGgWkbKx2"
+        self.user = userFirestore!.uid
         super.init(coder: aDecoder)
     }
     

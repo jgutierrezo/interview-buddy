@@ -16,6 +16,8 @@
 		0D1729A228FEF2C70059CBBE /* interview_buddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729A128FEF2C70059CBBE /* interview_buddyTests.swift */; };
 		0D1729AC28FEF2C70059CBBE /* interview_buddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */; };
 		0D1729AE28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */; };
+		0D49B32629310406007C15F9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32529310405007C15F9 /* Utilities.swift */; };
+		0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */; };
 		0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F52925821600ECECE4 /* SignUpViewController.swift */; };
 		0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F72925824200ECECE4 /* LoginViewController.swift */; };
 		0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F9292583A000ECECE4 /* HomeViewController.swift */; };
@@ -63,6 +65,8 @@
 		0D1729A728FEF2C70059CBBE /* interview-buddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-buddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITests.swift; sourceTree = "<group>"; };
 		0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D49B32529310405007C15F9 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0DC541F52925821600ECECE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0DC541F72925824200ECECE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0DC541F9292583A000ECECE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				0DC541F52925821600ECECE4 /* SignUpViewController.swift */,
 				0DC541F72925824200ECECE4 /* LoginViewController.swift */,
 				0DC541F9292583A000ECECE4 /* HomeViewController.swift */,
+				0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 		0DC541FB2927CB9600ECECE4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0D49B32529310405007C15F9 /* Utilities.swift */,
 				0DC541FC2927CBC000ECECE4 /* Constans.swift */,
 			);
 			path = Helpers;
@@ -454,8 +460,10 @@
 				0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */,
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
 				0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */,
+				0D49B32629310406007C15F9 /* Utilities.swift in Sources */,
 				0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */,
 				8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */,
+				0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */,
 				8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */,
 				8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */,
 				0D17298D28FEF2C60059CBBE /* SceneDelegate.swift in Sources */,

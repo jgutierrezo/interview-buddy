@@ -32,36 +32,67 @@ class LoginViewController: UIViewController {
     */
     @IBAction func loginTapped(_ sender: Any) {
         
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
         //Validate text fields
+        let error = validateFields()
         
-        
-        //Signing in the user
-        
-        
-        Auth.auth().signIn(withEmail: email, password: password ){
-            (result, error) in
+        if error != nil{
+            showError(error)
+        }else{
             
-            if error != nil {
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
-            }else{
-                self.transitionToHome()
+            //Signing in the user
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
+            
+            
+            
+            
+            
+            Auth.auth().signIn(withEmail: email, password: password ){
+                (result, error) in
+                
+                if error != nil {
+                    self.errorLabel.text = error!.localizedDescription
+                    self.errorLabel.alpha = 1
+                }else{
+                    self.transitionToHome()
+                }
             }
         }
-        
         
     }
     
     func transitionToHome(){
         
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.homeViewController) as? HomeViewController
+        let questionsViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.questionsViewController) as? QuestionViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = questionsViewController
         view.window?.makeKeyAndVisible()
         
+    }
+    
+    //nil if correct
+    func validateFields() -> String?{
+        
+        //Check that fields are filled in
+        if  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            return "Please fill in all fields."
+        }
+        
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+               
+        if Utilities.isValidEmail(cleanedEmail) == false{
+            return  "Not valid email format"
+        }
+          
+        return nil
+    }
+    
+    private func showError(_ error: String?) {
+        errorLabel.text = error!
+        errorLabel.alpha = 1
     }
     
 }

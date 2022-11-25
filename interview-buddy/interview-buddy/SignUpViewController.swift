@@ -40,10 +40,19 @@ class SignUpViewController: UIViewController {
             return "Please fill in all fields."
         }
         
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         // Check if password is secure
-        if false{
-            return  "Password is not valid"
+        
+        let securePassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isValidEmail(cleanedEmail) == false{
+            return  "Not valid email format"
+        }
+            
+        if Utilities.isPasswordValid(securePassword) == false{
+            return  "Password must contain at least 8 characters, a special character, and a number"
         }
         
         return nil
@@ -57,9 +66,9 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome(){
         
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.homeViewController) as? HomeViewController
+        let questionsViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.questionsViewController) as? QuestionViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = questionsViewController
         view.window?.makeKeyAndVisible()
         
     }
@@ -94,6 +103,14 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     
+                    db.collection("quizesToBadges").addDocument(data: ["language": "JS", "left": 10, "level": "Beginner", "user": result!.user.uid]){(error) in
+                        if error != nil{
+                            self.showError("Errors in user name and last name")
+                        }
+                    }
+                    
+                    
+                    
                     self.transitionToHome()
                     
                 }
@@ -104,4 +121,7 @@ class SignUpViewController: UIViewController {
         }
         
     }
+    
+    
+    
 }

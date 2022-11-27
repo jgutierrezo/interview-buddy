@@ -6,6 +6,7 @@
 //
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class QuestionViewController: UIViewController {
     
@@ -56,6 +57,29 @@ class QuestionViewController: UIViewController {
                 
             }
         }
+    }
+    
+    
+    @IBAction func signOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+    do {
+        
+      try firebaseAuth.signOut()
+        
+        self.transitionToLogin()
+        
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+    }
+    
+    func transitionToLogin(){
+        
+        let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.loginViewController) as? LoginViewController
+        
+        view.window?.rootViewController = loginViewController
+        view.window?.makeKeyAndVisible()
+        
     }
     
     func setQuestion() {

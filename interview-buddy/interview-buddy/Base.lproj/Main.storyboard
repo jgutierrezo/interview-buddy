@@ -97,6 +97,16 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-BB-qy4">
+                                <rect key="frame" x="239" y="27" width="135" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zS-Kg-8jG"/>
+                                    <action selector="signOut:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="gbj-BB-MeJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -391,6 +401,15 @@
                                     <constraint firstItem="p7T-bI-zG8" firstAttribute="top" secondItem="rYf-Qm-uD2" secondAttribute="top" constant="84" id="qyL-F9-RW3"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yel-iF-ws5">
+                                <rect key="frame" x="239" y="23" width="135" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="signOut:" destination="A4e-Dp-JdU" eventType="touchUpInside" id="K4Q-Qv-Lns"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBf-Lc-ijh"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -417,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW4-Ae-z1U" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="-778"/>
+            <point key="canvasLocation" x="-860" y="-778.43601895734594"/>
         </scene>
         <!--Badges Collection View Controller-->
         <scene sceneID="CnG-F0-re9">
@@ -500,7 +519,7 @@
         <!--Login View Controller-->
         <scene sceneID="7Gh-4k-Qb2">
             <objects>
-                <viewController id="EL8-uG-dZH" customClass="LoginViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="EL8-uG-dZH" customClass="LoginViewController" customModule="interview_buddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iul-Kt-KNb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

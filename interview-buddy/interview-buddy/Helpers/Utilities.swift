@@ -26,4 +26,6 @@ class Utilities {
         return emailPred.evaluate(with: email)
     }
     
+
+    
 }

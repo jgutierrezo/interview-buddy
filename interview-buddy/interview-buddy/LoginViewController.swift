@@ -56,22 +56,22 @@ class LoginViewController: UIViewController {
                     self.errorLabel.text = error!.localizedDescription
                     self.errorLabel.alpha = 1
                 }else{
-                    self.transitionToHome()
+                    //self.transitionToHome()
                 }
             }
         }
         
     }
     
-    func transitionToHome(){
-        
-        let questionsViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.questionsViewController) as? QuestionViewController
-        
-        view.window?.rootViewController = questionsViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
-    
+//    func transitionToHome(){
+//
+//        let questionsViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.questionsViewController) as? QuestionViewController
+//
+//        view.window?.rootViewController = questionsViewController
+//        view.window?.makeKeyAndVisible()
+//
+//    }
+//
     //nil if correct
     func validateFields() -> String?{
         

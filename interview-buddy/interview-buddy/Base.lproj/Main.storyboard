@@ -251,7 +251,7 @@
                                 <rect key="frame" x="16" y="699" width="358" height="6"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z94-FE-JHz">
-                                <rect key="frame" x="29" y="544" width="310" height="34.333333333333343"/>
+                                <rect key="frame" x="29" y="544" width="310" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -540,7 +540,7 @@
             <objects>
                 <viewController title="Category view controller" id="TMJ-5i-MfK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3CI-05-TXD">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPH-do-lh5">
@@ -1159,7 +1159,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system" title=""/>
                                 <connections>
-                                    <segue destination="TMJ-5i-MfK" kind="show" id="nYR-kB-jqu"/>
+                                    <segue destination="S10-35-CUe" kind="show" id="5un-6Z-ZID"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ni8-3S-NR2">
@@ -1216,15 +1216,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-95-dAw">
-                                <rect key="frame" x="32" y="159" width="54" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system" title=""/>
-                                <connections>
-                                    <segue destination="TMJ-5i-MfK" kind="show" id="6hc-mz-mGp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ3-P5-qJP">
                                 <rect key="frame" x="16" y="269" width="86" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1291,15 +1282,16 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0x-ke-sFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-494" y="-1651"/>
+            <point key="canvasLocation" x="-331" y="-1651"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9ZM-Xg-dyu"/>
+        <segue reference="5Z7-z8-dM0"/>
+        <segue reference="5un-6Z-ZID"/>
+        <segue reference="bcf-Ym-QKO"/>
         <segue reference="f5Y-I1-2eu"/>
         <segue reference="4p6-G6-eiQ"/>
-        <segue reference="nYR-kB-jqu"/>
-        <segue reference="jpc-rb-xKc"/>
+        <segue reference="Fxr-MC-MEg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="badge2" width="77" height="76"/>

@@ -23,10 +23,11 @@
 		0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F9292583A000ECECE4 /* HomeViewController.swift */; };
 		0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541FC2927CBC000ECECE4 /* Constans.swift */; };
 		1471907A4186E3822205CC33 /* Pods_interview_buddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */; };
+		8B17843E2938F57300BD8783 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17843D2938F57300BD8783 /* LanguageViewController.swift */; };
+		8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */; };
+		8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178443293916D000BD8783 /* CategorieViewController.swift */; };
+		8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178445293944F000BD8783 /* CategorieTableViewCell.swift */; };
 		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
-		8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */; };
-		8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */; };
-		8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */; };
 		8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */; };
 		97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */; };
 		F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */; };
@@ -74,10 +75,11 @@
 		5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B17843D2938F57300BD8783 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B178443293916D000BD8783 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
+		8B178445293944F000BD8783 /* CategorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieTableViewCell.swift; sourceTree = "<group>"; };
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionAnswerCard.swift; path = utils/QuestionAnswerCard.swift; sourceTree = "<group>"; };
-		8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewController.swift; sourceTree = "<group>"; };
-		8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,13 +152,14 @@
 				0D17299528FEF2C70059CBBE /* LaunchScreen.storyboard */,
 				0D17299828FEF2C70059CBBE /* Info.plist */,
 				8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */,
-				8B2C6AF5291AFAA700D415CF /* QuestionAnswerCard.swift */,
-				8B2C6AF7291AFE8100D415CF /* BadgesCollectionViewController.swift */,
-				8B2C6AF9291B001B00D415CF /* BadgeCollectionViewCell.swift */,
 				0DC541F52925821600ECECE4 /* SignUpViewController.swift */,
 				0DC541F72925824200ECECE4 /* LoginViewController.swift */,
 				0DC541F9292583A000ECECE4 /* HomeViewController.swift */,
 				0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */,
+				8B17843D2938F57300BD8783 /* LanguageViewController.swift */,
+				8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */,
+				8B178443293916D000BD8783 /* CategorieViewController.swift */,
+				8B178445293944F000BD8783 /* CategorieTableViewCell.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -454,9 +457,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */,
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
-				8B2C6AF6291AFAA700D415CF /* QuestionAnswerCard.swift in Sources */,
+				8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */,
+				8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */,
 				0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */,
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
 				0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */,
@@ -464,8 +469,7 @@
 				0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */,
 				8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */,
 				0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */,
-				8B2C6AF8291AFE8100D415CF /* BadgesCollectionViewController.swift in Sources */,
-				8B2C6AFA291B001B00D415CF /* BadgeCollectionViewCell.swift in Sources */,
+				8B17843E2938F57300BD8783 /* LanguageViewController.swift in Sources */,
 				0D17298D28FEF2C60059CBBE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

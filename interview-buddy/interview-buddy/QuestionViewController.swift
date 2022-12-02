@@ -10,10 +10,7 @@ import FirebaseAuth
 
 class QuestionViewController: UIViewController {
     
-    var language = ""
-    var level = ""
-    
-    /*let db = Firestore.firestore()
+    let db = Firestore.firestore()
 
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answer1: UIButton!
@@ -30,16 +27,16 @@ class QuestionViewController: UIViewController {
     var incorrect : Int
     var topicsToReview: Set<String>
     var questions: [Dictionary<String, Any>]
-    */
+    
     required init?(coder aDecoder: NSCoder) {
-        /*self.questionNumber = 0
+        self.questionNumber = 0
         self.correct = 0
         self.incorrect = 0
         self.topicsToReview = []
         self.data = [:]
-        self.questions = []*/
-        self.language = "Prev"
-        self.level = "Prev"
+        self.questions = []
+        self.language = ""
+        self.level = ""
         super.init(coder: aDecoder)
     }
 
@@ -47,7 +44,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         print(language)
         print(level)
-        /*db.collection("questions").whereField("language", isEqualTo: self.language).whereField("level", isEqualTo: level).getDocuments{ (querySnapshot, err) in
+        db.collection("questions").whereField("language", isEqualTo: self.language).whereField("level", isEqualTo: level).getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -61,7 +58,7 @@ class QuestionViewController: UIViewController {
                 self.setQuestion()
                 
             }
-        }*/
+        }
     }
     
     
@@ -87,7 +84,7 @@ class QuestionViewController: UIViewController {
         
     }
     
-    /*func setQuestion() {
+    func setQuestion() {
         questionLabel.text = questions[questionNumber]["question"] as? String
         answer1.setTitle(questions[questionNumber]["answer1"] as? String, for: .normal)
         answer2.setTitle(questions[questionNumber]["answer2"] as? String, for: .normal)
@@ -122,5 +119,5 @@ class QuestionViewController: UIViewController {
                 nextViewController.data = results
             }
         }
-    }*/
+    }
 }

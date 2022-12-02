@@ -11,7 +11,7 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     
     var language = ""
     var data = [
-        ["name": "Cat1", "level": "Begginer"],
+        ["name": "Cat1", "level": "Beginner"],
         ["name": "Cat2", "level": "Intermediate"],
         ["name": "Cat3", "level": "Advance"],
     ]
@@ -35,7 +35,7 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selected = self.data[indexPath.row]["name"]!
+        self.selected = self.data[indexPath.row]["level"]!
         performSegue(withIdentifier: "CategorieToQuestion", sender: nil)
     }
     

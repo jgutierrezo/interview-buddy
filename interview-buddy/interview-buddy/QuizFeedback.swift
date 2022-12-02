@@ -10,15 +10,10 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class QuizFeedback: UIViewController {
-
-    @IBOutlet weak var rePlayButton: UIButton!
-    
-    @IBOutlet weak var homeButton: UIButton!
     
     @IBOutlet weak var topicsToReviewTV: UITextView!
-    @IBOutlet weak var correctTV: UITextView!
-    @IBOutlet var statusLabel: UILabel!
-    @IBOutlet weak var mistakesTV: UITextView!
+    @IBOutlet weak var correctTV: UILabel!
+    @IBOutlet weak var mistakesTV: UILabel!
     @IBOutlet var quizzesLeft: UITextView!
     
     var data:  Dictionary<String, Any>
@@ -31,21 +26,14 @@ class QuizFeedback: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         self.data = [:]
-        self.user = userFirestore!.uid
+        //self.user = userFirestore!.uid
+        self.user = "j8Gzxm0KkAUBZabZIPteGgWkbKx2"
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setStyle()
         getQuizzesStatus()
-        if (self.data["correct"]! as! Int > self.data["incorrect"]! as! Int) {
-            statusLabel.text = "Passed!"
-            statusLabel.textColor = UIColor.green
-        } else {
-            statusLabel.text = "Failed!"
-            statusLabel.textColor = UIColor.red
-        }
         correctTV.text = "Correct \n \(self.data["correct"]!)"
         mistakesTV.text = "Incorrect \n \(self.data["incorrect"]!)"
         var topicsString: String = "Topics to review: \n"
@@ -85,16 +73,7 @@ class QuizFeedback: UIViewController {
 
     }
     
-    func setStyle() {
-        rePlayButton.layer.cornerRadius = 15
-        rePlayButton.clipsToBounds = true
-        homeButton.layer.cornerRadius = 15
-        homeButton.clipsToBounds = true
-        
-        correctTV.layer.cornerRadius = 10
-        mistakesTV.layer.cornerRadius = 10
-        topicsToReviewTV.layer.cornerRadius = 10
-    }
+
 
     @IBAction func signOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()

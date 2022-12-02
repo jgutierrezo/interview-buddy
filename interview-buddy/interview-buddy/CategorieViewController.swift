@@ -6,16 +6,31 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CategorieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let db = Firestore.firestore()
     var language = ""
-    var data = [
-        ["name": "Cat1", "level": "Beginner"],
-        ["name": "Cat2", "level": "Intermediate"],
-        ["name": "Cat3", "level": "Advance"],
-    ]
+    var data: [Dictionary<String, Any>] = []
     var selected = ""
+    @IBOutlet weak var tView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        db.collection("categories")
+            .whereField("language", isEqualTo: self.language)
+            .getDocuments{(querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.data = []
+                for doc in querySnapshot!.documents {
+                    self.data.append(doc.data())
+                }
+                self.tView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +44,13 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Categorie", for: indexPath) as! CategorieTableViewCell
-        cell.name.text = self.data[indexPath.row]["name"]
-        cell.level.text = self.data[indexPath.row]["level"]
+        cell.name.text = self.data[indexPath.row]["name"] as! String
+        cell.level.text = self.data[indexPath.row]["level"] as! String
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selected = self.data[indexPath.row]["level"]!
+        self.selected = self.data[indexPath.row]["level"] as! String
         performSegue(withIdentifier: "CategorieToQuestion", sender: nil)
     }
     

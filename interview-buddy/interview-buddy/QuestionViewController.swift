@@ -39,11 +39,8 @@ class QuestionViewController: UIViewController {
         self.level = ""
         super.init(coder: aDecoder)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(language)
-        print(level)
+    
+    override func viewWillAppear(_ animated: Bool) {
         db.collection("questions").whereField("language", isEqualTo: self.language).whereField("level", isEqualTo: level).getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -59,6 +56,10 @@ class QuestionViewController: UIViewController {
                 
             }
         }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     

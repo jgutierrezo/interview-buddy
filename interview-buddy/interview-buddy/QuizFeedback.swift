@@ -15,6 +15,8 @@ class QuizFeedback: UIViewController {
     @IBOutlet weak var correctTV: UILabel!
     @IBOutlet weak var mistakesTV: UILabel!
     @IBOutlet var quizzesLeft: UITextView!
+    @IBOutlet var status: UILabel!
+    @IBOutlet var score: UILabel!
     
     var data:  Dictionary<String, Any>
     let db = Firestore.firestore()
@@ -33,9 +35,23 @@ class QuizFeedback: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.data)
         getQuizzesStatus()
-        correctTV.text = "Correct \n \(self.data["correct"]!)"
-        mistakesTV.text = "Incorrect \n \(self.data["incorrect"]!)"
+        let c = self.data["correct"] as! Int
+        let i = self.data["incorrect"] as! Int
+        var result: Int = 100
+        if (i != 0) {
+            result = c * 100 / (i + c) as! Int
+        }
+        if (self.data["correct"] as! Int >= self.data["incorrect"] as! Int) {
+            status.text = "Congratulations!"
+            score.text = "You have passed the quiz with \(result)%"
+        } else {
+            status.text = "Try Again!"
+            score.text = "You have failed the quiz with \(result)%"
+        }
+        correctTV.text = "Correct \(self.data["correct"]!)"
+        mistakesTV.text = "Mistake \(self.data["incorrect"]!)"
         var topicsString: String = "Topics to review: \n"
         for topic in self.data["topics"]! as! Set<String> {
             topicsString += " - \(topic) \n"
@@ -57,7 +73,7 @@ class QuizFeedback: UIViewController {
                 if number == 0 {
                     self.quizzesLeft.text = "Badge Achieved!"
                 } else {
-                    if (self.data["correct"]! as! Int > self.data["incorrect"]! as! Int) {
+                    if (self.data["correct"]! as! Int >= self.data["incorrect"]! as! Int) {
                         self.db.collection("quizesToBadges")
                             .document(querySnapshot!.documents[0].documentID)
                             .updateData([

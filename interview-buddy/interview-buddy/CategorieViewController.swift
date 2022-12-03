@@ -13,7 +13,8 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     let db = Firestore.firestore()
     var language = ""
     var data: [Dictionary<String, Any>] = []
-    var selected = ""
+    var selectedLevel = ""
+    var selectedCategorie = ""
     @IBOutlet weak var tView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,10 +32,13 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(language)
     }
     
     
@@ -50,7 +54,8 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selected = self.data[indexPath.row]["level"] as! String
+        self.selectedLevel = self.data[indexPath.row]["level"] as! String
+        self.selectedCategorie = self.data[indexPath.row]["name"] as! String
         performSegue(withIdentifier: "CategorieToQuestion", sender: nil)
     }
     
@@ -58,7 +63,8 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
         if segue.identifier == "CategorieToQuestion" {
             if let nextViewController = segue.destination as? QuestionViewController {
                 nextViewController.language = self.language
-                nextViewController.level = self.selected
+                nextViewController.categorie = self.selectedCategorie
+                nextViewController.level = self.selectedLevel
             }
         }
     }

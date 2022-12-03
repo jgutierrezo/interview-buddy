@@ -29,6 +29,8 @@
 		8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178445293944F000BD8783 /* CategorieTableViewCell.swift */; };
 		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
 		8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */; };
+		8BE49A95293AE17500266417 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE49A94293AE17500266417 /* QuizResultsViewController.swift */; };
+		8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */; };
 		97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */; };
 		F4BCD06A21993216B10CAD06 /* Pods_interview_buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BE49A94293AE17500266417 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
+		8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultTableViewCell.swift; sourceTree = "<group>"; };
 		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		974754C5314A7CD0A2DA125A /* Pods-interview-buddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.debug.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5EDD23E990EDA140BD5FB72 /* Pods-interview-buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy/Pods-interview-buddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */,
 				8B178443293916D000BD8783 /* CategorieViewController.swift */,
 				8B178445293944F000BD8783 /* CategorieTableViewCell.swift */,
+				8BE49A94293AE17500266417 /* QuizResultsViewController.swift */,
+				8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -458,6 +464,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */,
+				8BE49A95293AE17500266417 /* QuizResultsViewController.swift in Sources */,
+				8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */,
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
 				8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */,

@@ -35,19 +35,20 @@ class QuizFeedback: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.data)
         getQuizzesStatus()
         let c = self.data["correct"] as! Int
         let i = self.data["incorrect"] as! Int
         var result: Int = 100
         if (i != 0) {
-            result = c * 100 / (i + c) as! Int
+            result = c * 100 / (i + c)
         }
         if (self.data["correct"] as! Int >= self.data["incorrect"] as! Int) {
             status.text = "Congratulations!"
+            status.textColor = UIColor(red: 0.53, green: 0.87, blue: 0.53, alpha: 1.00)
             score.text = "You have passed the quiz with \(result)%"
         } else {
             status.text = "Try Again!"
+            status.textColor = UIColor.red
             score.text = "You have failed the quiz with \(result)%"
         }
         correctTV.text = "Correct \(self.data["correct"]!)"
@@ -57,6 +58,10 @@ class QuizFeedback: UIViewController {
             topicsString += " - \(topic) \n"
         }
         topicsToReviewTV.text = topicsString
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     func getQuizzesStatus() {
@@ -111,6 +116,16 @@ class QuizFeedback: UIViewController {
         view.window?.rootViewController = loginViewController
         view.window?.makeKeyAndVisible()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FeedbackToReview" {
+            if let nextViewController = segue.destination as? QuizResultsViewController {
+                nextViewController.correct = self.data["correct"] as! Int
+                nextViewController.mistakes = self.data["incorrect"] as! Int
+                nextViewController.data = self.data["results"] as! [Bool]
+            }
+        }
     }
     
 }

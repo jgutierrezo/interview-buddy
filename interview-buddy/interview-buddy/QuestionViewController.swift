@@ -17,9 +17,11 @@ class QuestionViewController: UIViewController {
     @IBOutlet var answer2: UIButton!
     @IBOutlet var answer3: UIButton!
     @IBOutlet var answer4: UIButton!
+    @IBOutlet var questionTitle: UILabel!
     
     var language: String
     var level: String
+    var categorie: String
     
     var data: Dictionary<String, Any>
     var questionNumber: Int
@@ -27,6 +29,7 @@ class QuestionViewController: UIViewController {
     var incorrect : Int
     var topicsToReview: Set<String>
     var questions: [Dictionary<String, Any>]
+    var results: [Bool]
     
     required init?(coder aDecoder: NSCoder) {
         self.questionNumber = 0
@@ -37,11 +40,17 @@ class QuestionViewController: UIViewController {
         self.questions = []
         self.language = ""
         self.level = ""
+        self.categorie = ""
+        self.results = []
         super.init(coder: aDecoder)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        db.collection("questions").whereField("language", isEqualTo: self.language).whereField("level", isEqualTo: level).getDocuments{ (querySnapshot, err) in
+        db.collection("questions")
+            .whereField("language", isEqualTo: self.language)
+            .whereField("level", isEqualTo: level)
+            .whereField("categorie", isEqualTo: categorie)
+            .getDocuments{ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -86,6 +95,7 @@ class QuestionViewController: UIViewController {
     }
     
     func setQuestion() {
+        questionTitle.text = "Question \(questionNumber + 1)"
         questionLabel.text = questions[questionNumber]["question"] as? String
         answer1.setTitle(questions[questionNumber]["answer1"] as? String, for: .normal)
         answer2.setTitle(questions[questionNumber]["answer2"] as? String, for: .normal)
@@ -96,8 +106,10 @@ class QuestionViewController: UIViewController {
     @IBAction func selectAnswer(_ sender: UIButton){
         if questions[questionNumber]["correct"] as? String == sender.titleLabel!.text {
             correct += 1
+            results.append(true)
         } else {
             incorrect +=  1
+            results.append(false)
             self.topicsToReview.insert(questions[questionNumber]["topic"] as! String)
         }
         questionNumber += 1
@@ -117,6 +129,8 @@ class QuestionViewController: UIViewController {
                 results["topics"] = self.topicsToReview
                 results["language"] = self.language
                 results["level"] = self.level
+                results["categorie"] = self.categorie
+                results["results"] = self.results
                 nextViewController.data = results
             }
         }

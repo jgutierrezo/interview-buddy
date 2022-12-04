@@ -1,26 +1,26 @@
 //
-//  CategorieViewController.swift
+//  BadgesViewController2.swift
 //  interview-buddy
 //
-//  Created by Rodrigo Chavez on 2022-12-01.
+//  Created by Juan David Gutierrez Ochoa on 2022-12-03.
 //
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
-class CategorieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class BadgesViewController2: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     let db = Firestore.firestore()
-    //var language = ""
-    var language = ""
+    
     var data: [Dictionary<String, Any>] = []
     var selectedLevel = ""
     var selectedCategorie = ""
     @IBOutlet weak var tView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        db.collection("categories")
-            .whereField("language", isEqualTo: self.language)
+        db.collection("badges")
+            .whereField("user_id", isEqualTo: Auth.auth().currentUser!.uid)
             .getDocuments{(querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -50,26 +50,14 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Categorie", for: indexPath) as! CategorieTableViewCell
-        cell.name.text = self.data[indexPath.row]["name"] as! String
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BadgeCell", for: indexPath) as! BadgeTableViewCell2
+       // cell.name.text = self.data[indexPath.row]["image"] as! String
+        cell.img.image = UIImage(named:self.data[indexPath.row]["image"] as! String)
+        cell.language.text = self.data[indexPath.row]["language"] as! String
         cell.level.text = self.data[indexPath.row]["level"] as! String
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedLevel = self.data[indexPath.row]["level"] as! String
-        self.selectedCategorie = self.data[indexPath.row]["name"] as! String
-        performSegue(withIdentifier: "CategorieToQuestion", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CategorieToQuestion" {
-            if let nextViewController = segue.destination as? QuestionViewController {
-                nextViewController.language = self.language
-                nextViewController.categorie = self.selectedCategorie
-                nextViewController.level = self.selectedLevel
-            }
-        }
-    }
+
 
 }

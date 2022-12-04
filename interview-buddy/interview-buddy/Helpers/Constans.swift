@@ -10,6 +10,9 @@ import Foundation
 struct Constans {
     struct Storyboard {
         static let questionsViewController = "QuestionVC"
+        static let categoriesViewController2 = "CategoryVC"
+        static let categoriesViewController = "TabController"
+        static let navigationControllerViewController = "NavigationControllerViewController"
         static let loginViewController = "LoginViewController"
     }
 }

@@ -16,6 +16,10 @@
 		0D1729A228FEF2C70059CBBE /* interview_buddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729A128FEF2C70059CBBE /* interview_buddyTests.swift */; };
 		0D1729AC28FEF2C70059CBBE /* interview_buddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */; };
 		0D1729AE28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */; };
+		0D235270293C0A0800CE697F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D23526F293C0A0800CE697F /* TabBarViewController.swift */; };
+		0D235276293C3B9E00CE697F /* BadgesViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D235275293C3B9E00CE697F /* BadgesViewController2.swift */; };
+		0D235278293C3D3D00CE697F /* BadgeTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */; };
+		0D23527B293CF09500CE697F /* NavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */; };
 		0D49B32629310406007C15F9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32529310405007C15F9 /* Utilities.swift */; };
 		0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */; };
 		0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F52925821600ECECE4 /* SignUpViewController.swift */; };
@@ -68,6 +72,10 @@
 		0D1729A728FEF2C70059CBBE /* interview-buddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-buddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1729AB28FEF2C70059CBBE /* interview_buddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITests.swift; sourceTree = "<group>"; };
 		0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_buddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D23526F293C0A0800CE697F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Helpers/TabBarViewController.swift; sourceTree = "<group>"; };
+		0D235275293C3B9E00CE697F /* BadgesViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewController2.swift; sourceTree = "<group>"; };
+		0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell2.swift; sourceTree = "<group>"; };
+		0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewController.swift; sourceTree = "<group>"; };
 		0D49B32529310405007C15F9 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0DC541F52925821600ECECE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -146,9 +154,11 @@
 		0D17298928FEF2C60059CBBE /* interview-buddy */ = {
 			isa = PBXGroup;
 			children = (
+				0D235279293CCDC500CE697F /* authentication */,
 				0DC541FB2927CB9600ECECE4 /* Helpers */,
 				8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */,
 				0D17298A28FEF2C60059CBBE /* AppDelegate.swift */,
+				0D23526F293C0A0800CE697F /* TabBarViewController.swift */,
 				0D17298C28FEF2C60059CBBE /* SceneDelegate.swift */,
 				0D17298E28FEF2C60059CBBE /* QuizFeedback.swift */,
 				0D17299028FEF2C60059CBBE /* Main.storyboard */,
@@ -156,16 +166,16 @@
 				0D17299528FEF2C70059CBBE /* LaunchScreen.storyboard */,
 				0D17299828FEF2C70059CBBE /* Info.plist */,
 				8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */,
-				0DC541F52925821600ECECE4 /* SignUpViewController.swift */,
-				0DC541F72925824200ECECE4 /* LoginViewController.swift */,
 				0DC541F9292583A000ECECE4 /* HomeViewController.swift */,
-				0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */,
 				8B17843D2938F57300BD8783 /* LanguageViewController.swift */,
 				8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */,
 				8B178443293916D000BD8783 /* CategorieViewController.swift */,
 				8B178445293944F000BD8783 /* CategorieTableViewCell.swift */,
 				8BE49A94293AE17500266417 /* QuizResultsViewController.swift */,
 				8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */,
+				0D235275293C3B9E00CE697F /* BadgesViewController2.swift */,
+				0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */,
+				0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -185,6 +195,16 @@
 				0D1729AD28FEF2C70059CBBE /* interview_buddyUITestsLaunchTests.swift */,
 			);
 			path = "interview-buddyUITests";
+			sourceTree = "<group>";
+		};
+		0D235279293CCDC500CE697F /* authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */,
+				0DC541F72925824200ECECE4 /* LoginViewController.swift */,
+				0DC541F52925821600ECECE4 /* SignUpViewController.swift */,
+			);
+			path = authentication;
 			sourceTree = "<group>";
 		};
 		0DC541FB2927CB9600ECECE4 /* Helpers */ = {
@@ -468,10 +488,14 @@
 				8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */,
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
+				0D235276293C3B9E00CE697F /* BadgesViewController2.swift in Sources */,
 				8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */,
 				8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */,
+				0D235278293C3D3D00CE697F /* BadgeTableViewCell2.swift in Sources */,
 				0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */,
+				0D23527B293CF09500CE697F /* NavigationControllerViewController.swift in Sources */,
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
+				0D235270293C0A0800CE697F /* TabBarViewController.swift in Sources */,
 				0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */,
 				0D49B32629310406007C15F9 /* Utilities.swift in Sources */,
 				0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */,

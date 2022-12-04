@@ -64,14 +64,14 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-//    func transitionToHome(){
-//
-//        let questionsViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.questionsViewController) as? QuestionViewController
-//
-//        view.window?.rootViewController = questionsViewController
-//        view.window?.makeKeyAndVisible()
-//
-//    }
+    func transitionToHome(){
+        
+        let categoriesViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.categoriesViewController) as? LanguageViewController
+        
+        view.window?.rootViewController = categoriesViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
     
     @IBAction func signUpTapped(_ sender: Any) {
         
@@ -111,7 +111,7 @@ class SignUpViewController: UIViewController {
                     
                     
                     
-                    //self.transitionToHome()
+                    self.transitionToHome()
                     
                 }
                 

@@ -3,4 +3,6 @@ interview-buddy/DS_Store
 project.xcworkspace/
 xcuserdata/
 interview-buddy/Pods/
+.DS_Store
+interview-buddy/.DS_Store
 track

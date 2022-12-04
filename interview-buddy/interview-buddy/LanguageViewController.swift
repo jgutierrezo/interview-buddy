@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class LanguageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -38,6 +39,27 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
     }
     
+    @IBAction func signOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+    do {
+        
+      try firebaseAuth.signOut()
+        
+        self.transitionToLogin()
+        
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+    }
+    
+    func transitionToLogin(){
+        
+        let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.loginViewController) as? LoginViewController
+        
+        view.window?.rootViewController = loginViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count

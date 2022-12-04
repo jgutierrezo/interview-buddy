@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
-
+import FirebaseAuth
 class CategorieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let db = Firestore.firestore()
@@ -33,6 +33,30 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
+    
+    
+    @IBAction func signOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+    do {
+        
+      try firebaseAuth.signOut()
+        
+        self.transitionToLogin()
+        
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+    }
+    
+    func transitionToLogin(){
+        
+        let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.loginViewController) as? LoginViewController
+        
+        view.window?.rootViewController = loginViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false

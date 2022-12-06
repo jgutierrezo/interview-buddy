@@ -25,8 +25,10 @@ class BadgesViewController2: UIViewController, UITableViewDataSource, UITableVie
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                print("entro")
                 self.data = []
                 for doc in querySnapshot!.documents {
+                    print("loop")
                     self.data.append(doc.data())
                 }
                 self.tView.reloadData()

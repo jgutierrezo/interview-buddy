@@ -28,8 +28,7 @@ class QuizFeedback: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         self.data = [:]
-        //self.user = userFirestore!.uid
-        self.user = "j8Gzxm0KkAUBZabZIPteGgWkbKx2"
+        self.user = userFirestore!.uid
         super.init(coder: aDecoder)
     }
     
@@ -73,21 +72,45 @@ class QuizFeedback: UIViewController {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                let data = querySnapshot!.documents[0].data()
-                let number: Int = data["left"] as! Int
-                if number == 0 {
-                    self.quizzesLeft.text = "Badge Achieved!"
-                } else {
+                if (querySnapshot!.documents.count <= 0) {
+                    var num = 10
                     if (self.data["correct"]! as! Int >= self.data["incorrect"]! as! Int) {
-                        self.db.collection("quizesToBadges")
-                            .document(querySnapshot!.documents[0].documentID)
-                            .updateData([
-                                "left": number - 1
-                            ])
-                        self.quizzesLeft.text = "Pending Quizes for badge: \(number - 1)"
-                    } else {
-                        self.quizzesLeft.text = "Pending Quizes for badge: \(number)"
+                            num = 9
                     }
+                    self.quizzesLeft.text = "Pending Quizes for badge: \(num)"
+                    self.db.collection("quizesToBadges").addDocument(data: ["language": self.data["language"], "left": num, "level": self.data["level"], "user": self.user]){(error) in
+                        if error != nil{
+                            print("Error")
+                        }
+                    }
+                } else {
+                    let data = querySnapshot!.documents[0].data()
+                    let number: Int = data["left"] as! Int
+                    if number == 0 {
+                        self.quizzesLeft.text = "Badge Achieved!"
+                    } else {
+                        if (self.data["correct"]! as! Int >= self.data["incorrect"]! as! Int) {
+                            if (number == 1) {
+                                self.db.collection("badges").addDocument(data: ["language": self.data["language"], "image": "badge2", "level": self.data["level"], "user_id": self.user]){(error) in
+                                    if error != nil{
+                                        print("Error")
+                                    }
+                                }
+                                self.quizzesLeft.text = "Badge Achieved!"
+                            }
+                            else {
+                                self.quizzesLeft.text = "Pending Quizes for badge: \(number - 1)"
+                            }
+                            self.db.collection("quizesToBadges")
+                                .document(querySnapshot!.documents[0].documentID)
+                                .updateData([
+                                    "left": number - 1
+                                ])
+                        } else {
+                            self.quizzesLeft.text = "Pending Quizes for badge: \(number)"
+                        }
+                    }
+                    
                 }
             }
         }

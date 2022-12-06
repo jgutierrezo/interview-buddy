@@ -29,6 +29,10 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
 
 
     
@@ -102,14 +106,6 @@ class SignUpViewController: UIViewController {
                             self.showError("Errors in user name and last name")
                         }
                     }
-                    
-                    db.collection("quizesToBadges").addDocument(data: ["language": "JS", "left": 10, "level": "Beginner", "user": result!.user.uid]){(error) in
-                        if error != nil{
-                            self.showError("Errors in user name and last name")
-                        }
-                    }
-                    
-                    
                     
                     self.transitionToHome()
                     

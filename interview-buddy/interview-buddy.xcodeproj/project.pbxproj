@@ -27,6 +27,7 @@
 		0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F9292583A000ECECE4 /* HomeViewController.swift */; };
 		0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541FC2927CBC000ECECE4 /* Constans.swift */; };
 		1471907A4186E3822205CC33 /* Pods_interview_buddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */; };
+		8B168670293EF5E600F539F4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */; };
 		8B17843E2938F57300BD8783 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17843D2938F57300BD8783 /* LanguageViewController.swift */; };
 		8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */; };
 		8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178443293916D000BD8783 /* CategorieViewController.swift */; };
@@ -85,6 +86,7 @@
 		5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8B17843D2938F57300BD8783 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B178443293916D000BD8783 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				0D235275293C3B9E00CE697F /* BadgesViewController2.swift */,
 				0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */,
 				0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */,
+				8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
 				0D235276293C3B9E00CE697F /* BadgesViewController2.swift in Sources */,
+				8B168670293EF5E600F539F4 /* WelcomeViewController.swift in Sources */,
 				8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */,
 				8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */,
 				0D235278293C3D3D00CE697F /* BadgeTableViewCell2.swift in Sources */,

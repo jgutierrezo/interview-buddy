@@ -14,5 +14,6 @@ struct Constans {
         static let categoriesViewController = "TabController"
         static let navigationControllerViewController = "NavigationControllerViewController"
         static let loginViewController = "LoginViewController"
+        static let authNavController = "AuthNavController"
     }
 }

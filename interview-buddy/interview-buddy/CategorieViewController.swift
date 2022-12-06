@@ -50,7 +50,7 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     
     func transitionToLogin(){
         
-        let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.loginViewController) as? LoginViewController
+        let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.authNavController) as? AuthNavController
         
         view.window?.rootViewController = loginViewController
         view.window?.makeKeyAndVisible()

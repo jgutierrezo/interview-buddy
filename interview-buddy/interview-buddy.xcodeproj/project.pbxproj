@@ -20,6 +20,7 @@
 		0D235276293C3B9E00CE697F /* BadgesViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D235275293C3B9E00CE697F /* BadgesViewController2.swift */; };
 		0D235278293C3D3D00CE697F /* BadgeTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */; };
 		0D23527B293CF09500CE697F /* NavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */; };
+		0D35B11D293F9C9800B222C7 /* AuthNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35B11C293F9C9800B222C7 /* AuthNavController.swift */; };
 		0D49B32629310406007C15F9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32529310405007C15F9 /* Utilities.swift */; };
 		0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */; };
 		0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F52925821600ECECE4 /* SignUpViewController.swift */; };
@@ -77,6 +78,7 @@
 		0D235275293C3B9E00CE697F /* BadgesViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewController2.swift; sourceTree = "<group>"; };
 		0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell2.swift; sourceTree = "<group>"; };
 		0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewController.swift; sourceTree = "<group>"; };
+		0D35B11C293F9C9800B222C7 /* AuthNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavController.swift; sourceTree = "<group>"; };
 		0D49B32529310405007C15F9 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0DC541F52925821600ECECE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */,
 				0DC541F72925824200ECECE4 /* LoginViewController.swift */,
 				0DC541F52925821600ECECE4 /* SignUpViewController.swift */,
+				0D35B11C293F9C9800B222C7 /* AuthNavController.swift */,
 			);
 			path = authentication;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */,
+				0D35B11D293F9C9800B222C7 /* AuthNavController.swift in Sources */,
 				8BE49A95293AE17500266417 /* QuizResultsViewController.swift in Sources */,
 				8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */,
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,

@@ -70,9 +70,9 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome(){
         
-        let categoriesViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.categoriesViewController) as? LanguageViewController
+        let navigationControllerViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.navigationControllerViewController) as? NavigationControllerViewController
         
-        view.window?.rootViewController = categoriesViewController
+        view.window?.rootViewController = navigationControllerViewController
         view.window?.makeKeyAndVisible()
         
     }
@@ -95,13 +95,19 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password){(result, err) in
                 
                 if let err = err{
-                    self.showError("Error creating user")
+                    self.showError("Error creating user: "+err.localizedDescription)
                 }else{
                     //User created, now store name
                     
                     let db = Firestore.firestore()
                     
                     db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]){(error) in
+                        if error != nil{
+                            self.showError("Errors in user name and last name")
+                        }
+                    }
+                    
+                    db.collection("quizesToBadges").addDocument(data: ["language": "JS", "left": 10, "level": "Beginner", "user": result!.user.uid]){(error) in
                         if error != nil{
                             self.showError("Errors in user name and last name")
                         }

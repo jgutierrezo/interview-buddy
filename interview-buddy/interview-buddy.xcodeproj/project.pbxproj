@@ -29,6 +29,10 @@
 		0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541FC2927CBC000ECECE4 /* Constans.swift */; };
 		1471907A4186E3822205CC33 /* Pods_interview_buddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332B086F31D5CA2E69AA6ED /* Pods_interview_buddyTests.framework */; };
 		8B168670293EF5E600F539F4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */; };
+		8B1686762941103800F539F4 /* CoreDataLanguages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B1686742941103800F539F4 /* CoreDataLanguages.xcdatamodeld */; };
+		8B1686782941128F00F539F4 /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1686772941128F00F539F4 /* Language+CoreDataClass.swift */; };
+		8B16867A294112BD00F539F4 /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B168679294112BD00F539F4 /* Language+CoreDataProperties.swift */; };
+		8B16867C2941145C00F539F4 /* LanguagesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B16867B2941145C00F539F4 /* LanguagesData.plist */; };
 		8B17843E2938F57300BD8783 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B17843D2938F57300BD8783 /* LanguageViewController.swift */; };
 		8B1784422938FE3D00BD8783 /* LanguageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */; };
 		8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178443293916D000BD8783 /* CategorieViewController.swift */; };
@@ -89,13 +93,16 @@
 		5CBBCFAFFF165C37B75EF17D /* Pods_interview_buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C334ED571366B845E2A9EA /* Pods-interview-buddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddyTests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddyTests/Pods-interview-buddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8B1686752941103800F539F4 /* CoreDataLanguages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataLanguages.xcdatamodel; sourceTree = "<group>"; };
+		8B1686772941128F00F539F4 /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B168679294112BD00F539F4 /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B16867B2941145C00F539F4 /* LanguagesData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LanguagesData.plist; sourceTree = "<group>"; };
 		8B17843D2938F57300BD8783 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		8B1784412938FE3D00BD8783 /* LanguageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B178443293916D000BD8783 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
 		8B178445293944F000BD8783 /* CategorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieTableViewCell.swift; sourceTree = "<group>"; };
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BE49A94293AE17500266417 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
 		8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultTableViewCell.swift; sourceTree = "<group>"; };
 		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +142,6 @@
 		0D17297E28FEF2C60059CBBE = {
 			isa = PBXGroup;
 			children = (
-				8BB8CB1A291D7CBE0081859C /* GoogleService-Info.plist */,
 				0D17298928FEF2C60059CBBE /* interview-buddy */,
 				0D1729A028FEF2C70059CBBE /* interview-buddyTests */,
 				0D1729AA28FEF2C70059CBBE /* interview-buddyUITests */,
@@ -181,6 +187,10 @@
 				0D235277293C3D3D00CE697F /* BadgeTableViewCell2.swift */,
 				0D23527A293CF09500CE697F /* NavigationControllerViewController.swift */,
 				8B16866F293EF5E600F539F4 /* WelcomeViewController.swift */,
+				8B1686742941103800F539F4 /* CoreDataLanguages.xcdatamodeld */,
+				8B1686772941128F00F539F4 /* Language+CoreDataClass.swift */,
+				8B168679294112BD00F539F4 /* Language+CoreDataProperties.swift */,
+				8B16867B2941145C00F539F4 /* LanguagesData.plist */,
 			);
 			path = "interview-buddy";
 			sourceTree = "<group>";
@@ -361,6 +371,7 @@
 				0D17299728FEF2C70059CBBE /* LaunchScreen.storyboard in Resources */,
 				8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */,
 				0D17299428FEF2C70059CBBE /* Assets.xcassets in Resources */,
+				8B16867C2941145C00F539F4 /* LanguagesData.plist in Resources */,
 				0D17299228FEF2C60059CBBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +505,7 @@
 				8BE49A95293AE17500266417 /* QuizResultsViewController.swift in Sources */,
 				8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */,
 				0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */,
+				8B16867A294112BD00F539F4 /* Language+CoreDataProperties.swift in Sources */,
 				0D17298F28FEF2C60059CBBE /* QuizFeedback.swift in Sources */,
 				0D235276293C3B9E00CE697F /* BadgesViewController2.swift in Sources */,
 				8B168670293EF5E600F539F4 /* WelcomeViewController.swift in Sources */,
@@ -505,12 +517,14 @@
 				0D17298B28FEF2C60059CBBE /* AppDelegate.swift in Sources */,
 				0D235270293C0A0800CE697F /* TabBarViewController.swift in Sources */,
 				0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */,
+				8B1686762941103800F539F4 /* CoreDataLanguages.xcdatamodeld in Sources */,
 				0D49B32629310406007C15F9 /* Utilities.swift in Sources */,
 				0DC541FA292583A000ECECE4 /* HomeViewController.swift in Sources */,
 				8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */,
 				0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */,
 				8B17843E2938F57300BD8783 /* LanguageViewController.swift in Sources */,
 				0D17298D28FEF2C60059CBBE /* SceneDelegate.swift in Sources */,
+				8B1686782941128F00F539F4 /* Language+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +880,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B1686742941103800F539F4 /* CoreDataLanguages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B1686752941103800F539F4 /* CoreDataLanguages.xcdatamodel */,
+			);
+			currentVersion = 8B1686752941103800F539F4 /* CoreDataLanguages.xcdatamodel */;
+			path = CoreDataLanguages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D17297F28FEF2C60059CBBE /* Project object */;
 }

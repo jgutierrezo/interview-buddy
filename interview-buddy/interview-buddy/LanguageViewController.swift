@@ -31,7 +31,7 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = true
     }
 
     override func viewDidLoad() {

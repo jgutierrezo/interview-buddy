@@ -78,15 +78,11 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        
         let error = validateFields()
-        
         if error != nil{
             showError(error)
         }else{
-            
             //Cleaned versions of the data
-            
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -114,14 +110,9 @@ class SignUpViewController: UIViewController {
                     }
                     
                     self.transitionToHome()
-                    
                 }
-                
             }
-            
-            
         }
-        
     }
     
     

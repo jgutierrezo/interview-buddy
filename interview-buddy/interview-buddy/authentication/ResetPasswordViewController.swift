@@ -49,10 +49,7 @@ class ResetPasswordViewController: UIViewController {
                 return
             }
             self.feedbackLabel.text = "Recovery password email sent"
-            
         }
-        
-        
     }
     
 }

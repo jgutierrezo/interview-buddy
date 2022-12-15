@@ -25,10 +25,8 @@ class BadgesViewController2: UIViewController, UITableViewDataSource, UITableVie
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                print("entro")
                 self.data = []
                 for doc in querySnapshot!.documents {
-                    print("loop")
                     self.data.append(doc.data())
                 }
                 self.tView.reloadData()
@@ -53,7 +51,6 @@ class BadgesViewController2: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BadgeCell", for: indexPath) as! BadgeTableViewCell2
-       // cell.name.text = self.data[indexPath.row]["image"] as! String
         cell.img.image = UIImage(named:self.data[indexPath.row]["image"] as! String)
         cell.language.text = self.data[indexPath.row]["language"] as! String
         cell.level.text = self.data[indexPath.row]["level"] as! String

@@ -37,10 +37,12 @@ class QuizFeedback: UIViewController {
         getQuizzesStatus()
         let c = self.data["correct"] as! Int
         let i = self.data["incorrect"] as! Int
+        // Calculate percentage
         var result: Int = 100
         if (i != 0) {
             result = c * 100 / (i + c)
         }
+        // Render screen depending on the grade
         if (self.data["correct"] as! Int >= self.data["incorrect"] as! Int) {
             status.text = "Congratulations!"
             status.textColor = UIColor(red: 0.53, green: 0.87, blue: 0.53, alpha: 1.00)
@@ -52,6 +54,7 @@ class QuizFeedback: UIViewController {
         }
         correctTV.text = "Correct \(self.data["correct"]!)"
         mistakesTV.text = "Mistake \(self.data["incorrect"]!)"
+        // Create the topics String depending on the data recieved
         var topicsString: String = "Topics to review: \n"
         for topic in self.data["topics"]! as! Set<String> {
             topicsString += " - \(topic) \n"
@@ -60,10 +63,12 @@ class QuizFeedback: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Hide the back button
         navigationController?.isNavigationBarHidden = true
     }
     
     func getQuizzesStatus() {
+        // fetch the number of quizzes left for a batch from firestore
         db.collection("quizesToBadges")
             .whereField("language", isEqualTo: self.data["language"]!)
             .whereField("level", isEqualTo: self.data["level"]!)
@@ -73,6 +78,7 @@ class QuizFeedback: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 if (querySnapshot!.documents.count <= 0) {
+                    // if there is no document for this level, language and user it will create it
                     var num = 10
                     if (self.data["correct"]! as! Int >= self.data["incorrect"]! as! Int) {
                             num = 9
@@ -87,10 +93,13 @@ class QuizFeedback: UIViewController {
                     let data = querySnapshot!.documents[0].data()
                     let number: Int = data["left"] as! Int
                     if number == 0 {
+                        // Badge was already achieved
                         self.quizzesLeft.text = "Badge Achieved!"
                     } else {
+                        // Validates if the quizzed was passed
                         if (self.data["correct"]! as! Int >= self.data["incorrect"]! as! Int) {
                             if (number == 1) {
+                                // When badge is achieved it will create the document in collection badge
                                 self.db.collection("badges").addDocument(data: ["language": self.data["language"], "image": "badge2", "level": self.data["level"], "user_id": self.user]){(error) in
                                     if error != nil{
                                         print("Error")
@@ -101,6 +110,7 @@ class QuizFeedback: UIViewController {
                             else {
                                 self.quizzesLeft.text = "Pending Quizes for badge: \(number - 1)"
                             }
+                            // Update the quizzes left for a badge
                             self.db.collection("quizesToBadges")
                                 .document(querySnapshot!.documents[0].documentID)
                                 .updateData([
@@ -120,6 +130,7 @@ class QuizFeedback: UIViewController {
 
 
     @IBAction func signOut(_ sender: Any) {
+        // sign out current user
         let firebaseAuth = Auth.auth()
     do {
         
@@ -133,7 +144,7 @@ class QuizFeedback: UIViewController {
     }
     
     func transitionToLogin(){
-        
+        // go to Welcome screen
         let loginViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.loginViewController) as? LoginViewController
         
         view.window?.rootViewController = loginViewController
@@ -142,6 +153,7 @@ class QuizFeedback: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Passed the data for results screen
         if segue.identifier == "FeedbackToReview" {
             if let nextViewController = segue.destination as? QuizResultsViewController {
                 nextViewController.correct = self.data["correct"] as! Int

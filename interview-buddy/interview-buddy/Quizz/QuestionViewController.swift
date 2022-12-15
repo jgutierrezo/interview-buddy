@@ -46,6 +46,7 @@ class QuestionViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Fetch quizzes that matches language, level and categories
         db.collection("questions")
             .whereField("language", isEqualTo: self.language)
             .whereField("level", isEqualTo: level)
@@ -54,10 +55,12 @@ class QuestionViewController: UIViewController {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                // Generate a random number to select quiz
                 var index = 0
                 if querySnapshot!.documents.count > 0 {
                     index = Int.random(in: 0..<querySnapshot!.documents.count )
                 }
+                // Select random quiz
                 let document = querySnapshot!.documents[index]
                 self.data = document.data()
                 self.questions = self.data["questions"] as! [Dictionary<String, Any>]
@@ -95,6 +98,7 @@ class QuestionViewController: UIViewController {
     }
     
     func setQuestion() {
+        // Method to display questions
         questionTitle.text = "Question \(questionNumber + 1)"
         questionLabel.text = questions[questionNumber]["question"] as? String
         answer1.setTitle(questions[questionNumber]["answer1"] as? String, for: .normal)
@@ -104,15 +108,19 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func selectAnswer(_ sender: UIButton){
+        // Action when an answer is selected
+        // Validate if answer is correct
         if questions[questionNumber]["correct"] as? String == sender.titleLabel!.text {
             correct += 1
             results.append(true)
         } else {
+            // If incorrect save topic for review
             incorrect +=  1
             results.append(false)
             self.topicsToReview.insert(questions[questionNumber]["topic"] as! String)
         }
         questionNumber += 1
+        // Detect end of the quiz
         if questionNumber >= questions.count {
             performSegue(withIdentifier: "QuizDone", sender: nil)
         } else {
@@ -121,6 +129,7 @@ class QuestionViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Go to quiz feedback passing information
         if segue.identifier == "QuizDone" {
             if let nextViewController = segue.destination as? QuizFeedback{
                 var results: Dictionary<String, Any> = [:]

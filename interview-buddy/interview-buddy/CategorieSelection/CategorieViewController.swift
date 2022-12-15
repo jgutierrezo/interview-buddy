@@ -11,7 +11,6 @@ import FirebaseAuth
 class CategorieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let db = Firestore.firestore()
-    //var language = ""
     var language = ""
     var data: [Dictionary<String, Any>] = []
     var selectedLevel = ""
@@ -19,6 +18,7 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
+        // Fetch categories that matches the language
         db.collection("categories")
             .whereField("language", isEqualTo: self.language)
             .getDocuments{(querySnapshot, err) in
@@ -74,6 +74,7 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Set the name and level to the cell in the tables
         let cell = tableView.dequeueReusableCell(withIdentifier: "Categorie", for: indexPath) as! CategorieTableViewCell
         cell.name.text = self.data[indexPath.row]["name"] as! String
         cell.level.text = self.data[indexPath.row]["level"] as! String
@@ -81,12 +82,14 @@ class CategorieViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected level and categorie
         self.selectedLevel = self.data[indexPath.row]["level"] as! String
         self.selectedCategorie = self.data[indexPath.row]["name"] as! String
         performSegue(withIdentifier: "CategorieToQuestion", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Go to Quesitons screen passing data
         if segue.identifier == "CategorieToQuestion" {
             if let nextViewController = segue.destination as? QuestionViewController {
                 nextViewController.language = self.language

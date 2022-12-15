@@ -19,11 +19,15 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
     var managedContext: NSManagedObjectContext!
     
     override func viewWillAppear(_ animated: Bool) {
+        // Get the app delegate
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        // Get the managedContext
         managedContext = appDelegate?.persistentContainer.viewContext
+        // Insert languages to coreData
         insertData()
         let request: NSFetchRequest<Language> = Language.fetchRequest()
         do {
+            // Fetch languages from CoreData
             self.data = try managedContext.fetch(request)
         }  catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -46,7 +50,7 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
         //perform a fetch
         let fetch: NSFetchRequest<Language> = Language.fetchRequest()
         
-        //perform a search inside the BowTie entity
+        //perform a search inside the Language entity
         fetch.predicate = NSPredicate(format: "searchKey != nil")
         
         //count all data the stored in storage
@@ -65,16 +69,16 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
         
         //for the dictionary in the array
         for dict in dataArray {
-            //entity is BowTie2
+            //entity is Languages
             let entity = NSEntityDescription.entity(forEntityName: "Languages", in: managedContext)!
             
-            //input bow tie entity into storage
+            //input language entity into storage
             let language = Language(entity: entity, insertInto: managedContext)
             
             //plist data
             let dataDict = dict as! [String: Any]
             
-            //set bowtie entity to plist data
+            //set language entity to plist data
             language.language = dataDict["language"] as? String
             language.searchKey = dataDict["searchKey"] as? String
             language.imageName = dataDict["image"] as? String
@@ -84,7 +88,7 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
             language.image = image?.jpegData(compressionQuality: 8.0) //setting the image
             
         }
-        //save bow tie data to core data
+        //save language data to core data
         try! managedContext.save()
     }
     
@@ -117,21 +121,26 @@ class LanguageViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Get the cell
         let cell = cView.dequeueReusableCell(withReuseIdentifier: "language", for: indexPath) as! LanguageCollectionViewCell
+        // Get the language information to show
         let language = self.data[indexPath.row]
         let image = language.value(forKey: "image") as! Data
+        // Set the language name as image
         cell.label.text = language.value(forKey: "language") as? String
         cell.image.image = UIImage(data: image)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Detect language selected
         let language = self.data[indexPath.row]
         self.selected = language.value(forKey: "language") as! String
         performSegue(withIdentifier: "LanguageToSubCategorie", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Go to categorie screen passing the data
         if segue.identifier == "LanguageToSubCategorie" {
             if let nextViewController = segue.destination as? CategorieViewController{
                 nextViewController.language = self.selected

@@ -15,12 +15,14 @@ class WelcomeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Check if there is a user logged in
         if (Auth.auth().currentUser?.uid != nil) {
             transitionToHome()
         }
     }
     
     func transitionToHome(){
+        // Set the navigationController in the tab view as the root screen
         let navigationControllerViewController = storyboard?.instantiateViewController(identifier: Constans.Storyboard.navigationControllerViewController) as? NavigationControllerViewController
         
         view.window?.rootViewController = navigationControllerViewController

@@ -23,6 +23,7 @@
 		0D35B11D293F9C9800B222C7 /* AuthNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35B11C293F9C9800B222C7 /* AuthNavController.swift */; };
 		0D49B32629310406007C15F9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32529310405007C15F9 /* Utilities.swift */; };
 		0D49B32829311444007C15F9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */; };
+		0D622E9A29574FC00084C480 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D622E9929574FC00084C480 /* GoogleService-Info.plist */; };
 		0DC541F62925821600ECECE4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F52925821600ECECE4 /* SignUpViewController.swift */; };
 		0DC541F82925824200ECECE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541F72925824200ECECE4 /* LoginViewController.swift */; };
 		0DC541FD2927CBC000ECECE4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC541FC2927CBC000ECECE4 /* Constans.swift */; };
@@ -37,7 +38,6 @@
 		8B178444293916D000BD8783 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178443293916D000BD8783 /* CategorieViewController.swift */; };
 		8B178446293944F000BD8783 /* CategorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B178445293944F000BD8783 /* CategorieTableViewCell.swift */; };
 		8B2C6AF4291AFA0900D415CF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */; };
-		8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */; };
 		8BE49A95293AE17500266417 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE49A94293AE17500266417 /* QuizResultsViewController.swift */; };
 		8BE49A97293AE2CB00266417 /* QuestionResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */; };
 		97A3A617008BC64BC91383E1 /* Pods_interview_buddy_interview_buddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03534E78AE396528A7BF1473 /* Pods_interview_buddy_interview_buddyUITests.framework */; };
@@ -84,6 +84,7 @@
 		0D35B11C293F9C9800B222C7 /* AuthNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavController.swift; sourceTree = "<group>"; };
 		0D49B32529310405007C15F9 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0D49B32729311444007C15F9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		0D622E9929574FC00084C480 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DC541F52925821600ECECE4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0DC541F72925824200ECECE4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0DC541FC2927CBC000ECECE4 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		8B178443293916D000BD8783 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
 		8B178445293944F000BD8783 /* CategorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieTableViewCell.swift; sourceTree = "<group>"; };
 		8B2C6AF3291AFA0900D415CF /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BE49A94293AE17500266417 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
 		8BE49A96293AE2CB00266417 /* QuestionResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultTableViewCell.swift; sourceTree = "<group>"; };
 		8E5CF7D0B5F8018634285CB1 /* Pods-interview-buddy-interview-buddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; path = "Target Support Files/Pods-interview-buddy-interview-buddyUITests/Pods-interview-buddy-interview-buddyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +140,7 @@
 		0D17297E28FEF2C60059CBBE = {
 			isa = PBXGroup;
 			children = (
+				0D622E9929574FC00084C480 /* GoogleService-Info.plist */,
 				0D17298928FEF2C60059CBBE /* interview-buddy */,
 				0D1729A028FEF2C70059CBBE /* interview-buddyTests */,
 				0D1729AA28FEF2C70059CBBE /* interview-buddyUITests */,
@@ -172,7 +173,6 @@
 				8B3D51F82942E7C000D0B475 /* LanguageSelection */,
 				0D235279293CCDC500CE697F /* authentication */,
 				0DC541FB2927CB9600ECECE4 /* Helpers */,
-				8B56DCB3291D6D8400275EB9 /* GoogleService-Info.plist */,
 				0D17298A28FEF2C60059CBBE /* AppDelegate.swift */,
 				0D23526F293C0A0800CE697F /* TabBarViewController.swift */,
 				0D17298C28FEF2C60059CBBE /* SceneDelegate.swift */,
@@ -430,10 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D17299728FEF2C70059CBBE /* LaunchScreen.storyboard in Resources */,
-				8B56DCB4291D6D8400275EB9 /* GoogleService-Info.plist in Resources */,
 				0D17299428FEF2C70059CBBE /* Assets.xcassets in Resources */,
 				8B16867C2941145C00F539F4 /* LanguagesData.plist in Resources */,
 				0D17299228FEF2C60059CBBE /* Main.storyboard in Resources */,
+				0D622E9A29574FC00084C480 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

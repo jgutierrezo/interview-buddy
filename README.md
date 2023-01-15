@@ -17,7 +17,8 @@ https://user-images.githubusercontent.com/61996882/212560054-362585c7-9e9f-4df0-
 ## Technologies
 
 - [x] Swift
-- [x] Firebase
+- [x] Firebase Database
+- [x] Firebase Authentication
 - [x] Storyboard
 - [x] UITableView
 - [x] UICollectionView
